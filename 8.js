@@ -14,3 +14,9 @@ function trace(v) {
     trace,
     utils.reduce(count, 0)
   )(characters)
+=======
+  console.log(v)
+  return v
+}
+
+utils.compose(trace, utils.reduce(count, 0))(characters)

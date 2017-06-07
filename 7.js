@@ -1,9 +1,8 @@
 const { wordsToNumbers } = require('words-to-numbers')
-<<<<<<< HEAD
+
 const { map, compose, sum, filter,tap, curry } = require('ramda')
-=======
-const { map, compose, tap, curry, filter } = require('ramda')
->>>>>>> 9f5572e726046eabbd819d979c839a893052adb3
+
+
 
 const numbers = [
   'one',

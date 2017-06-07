@@ -1,14 +1,18 @@
+
 const {curry} = require('ramda')
 
 module.exports = {
   forEach: forEach,
-  map: map,
-  filter: filter,
-  reduce: curry(reduce),
-  compose: compose
+  map: curry(map),
+  filter: curry(filter),
+  reduce: log(curry(reduce), 'reduce is called'),
+  compose: log(curry(compose), 'compose is called')
 }
 
-// pure functions
+function log(fn, desc) {
+  console.log(desc)
+  return fn
+}
 
 
 function reduce(reducer, acc, list) {
